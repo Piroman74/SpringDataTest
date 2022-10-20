@@ -4,9 +4,8 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
-@Lazy
 public class A {
-    private final B b;
+    private  B b;
 
     public A(B b) {
         this.b = b;
@@ -14,11 +13,10 @@ public class A {
 }
 
 @Component
-@Lazy
 class B {
-    private final A a;
+    private A a;
 
-    public B(A a) {
+    public void setA(A a) {
         this.a = a;
     }
 }
