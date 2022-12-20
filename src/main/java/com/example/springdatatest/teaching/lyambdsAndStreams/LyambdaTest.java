@@ -2,6 +2,7 @@ package com.example.springdatatest.teaching.lyambdsAndStreams;
 
 import java.util.function.BiConsumer;
 import java.util.function.BinaryOperator;
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
@@ -40,8 +41,10 @@ public class LyambdaTest {
         BinaryOperator<Integer> b1 = (x, y) -> x * y;
         return b1.apply(2, 55);
     }
-
-
+    public void consumerTest() {
+        Consumer<Integer> printer = x -> System.out.printf("%d долларов \n", x);
+        printer.accept(600); // 600 долларов
+    }
 }
 
 @FunctionalInterface

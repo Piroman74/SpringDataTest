@@ -5,6 +5,7 @@ import com.example.springdatatest.models.dto.UsersDTO;
 import com.example.springdatatest.repository.UserRepository;
 import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.stream.Collectors;
 
 @Service
 public class UserService implements UserServiceAbs {
+
     private final UserRepository userRepository;
 
     @Autowired
@@ -35,4 +37,6 @@ public class UserService implements UserServiceAbs {
     public void saveUser(UsersDTO usersDTO){
 
     }
+
+
 }

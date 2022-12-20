@@ -1,16 +1,16 @@
 package com.example.springdatatest.teaching.patterns.singleton;
 
 public class Database {
-    private static Database instance;
+    private static Database instance; // ленивая инициализация
 
     private Database() {
     }
 
     public static Database getDatabase() {
         if (instance == null) {
-            instance = new Database();
+            instance = new Database(); // если тру то проинициализировать
         }
-        return instance;
+        return instance; // в противном случае вернуть ранее созданный объект
     }
 }
 
